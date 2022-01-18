@@ -1,53 +1,27 @@
 <template>
   <div id="app">
     <div class="container">
-      <Header />
-      <transition name="appear">
-        <div class="bg-success" v-if="display">
-        <h1 class="text-white">Headding</h1>
-      </div>
-      </transition>
-      <div>
-        <button 
-        class="btn btn-info"
-        @click="changeHeading"
-         >Toggle</button>
-         <hr>
-         <router-view></router-view>
-      </div>
+      <FriendContact></FriendContact>
+      <FriendContact></FriendContact>
+      <FriendContact></FriendContact>
+      <FriendContact></FriendContact>
+      <h1>fghjk</h1>
+      <p>Lorem ipsum dolor siconsequuntur laborum? Expedita?</p>
     </div>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import FriendContact from './components/FriendContact.vue'
 export default {
   name: 'App',
   components:{
-    Header
-  },
-  data(){
-    return{
-      display:false
-    }
-  },
-  methods:{
-    changeHeading(){
-      this.display=!this.display
-    }
+    FriendContact
   }
+  
 }
 </script>
 
 <style>
-.appear-enter{
-  opacity: 0;
-}
-.appear-enter-active{
-  transition: opacity 3s;
-}
-.appear-leave-active{
-  opacity: 0;
-  transition: opacity 3s;
-}
+
 </style>
