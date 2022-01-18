@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-      <FriendContact></FriendContact>
+      <FriendContact :fullName="fullName"></FriendContact>
       <FriendContact></FriendContact>
       <FriendContact></FriendContact>
       <FriendContact></FriendContact>
@@ -17,6 +17,17 @@ export default {
   name: 'App',
   components:{
     FriendContact
+  },
+  data(){
+    return{
+      firstName:'Saiful',
+      lastName:'Islam'
+    }
+  },
+  computed:{
+    fullName(){
+      return this.firstName + " " + this.lastName
+    }
   }
   
 }
